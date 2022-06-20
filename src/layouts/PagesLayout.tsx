@@ -21,11 +21,9 @@ const PagesLayout = ({ children, content }: Props) => {
 		? content.body.findIndex((slice) => slice.slice_type === 'navbar')
 		: -1;
 
-	console.log(content.body.slice(childrenPosition + 1, footerPosition));
-
 	return (
 		<>
-			<header className="relative" ref={upperRef}>
+			<header className="sticky top-0" ref={upperRef}>
 				<SliceZone
 					slices={content.body.slice(NavbarPosition, childrenPosition)}
 					components={layoutComponents}
