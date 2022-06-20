@@ -4,7 +4,7 @@ import React from 'react';
 
 export type ChildrenType = prismicT.Slice<'children'>;
 
-const Children = ({ context }: SliceComponentProps<ChildrenType, JSX.Element | JSX.Element[]>) => {
+const Children = ({ context }: SliceComponentProps<ChildrenType>) => {
 	return <>{context}</>;
 };
 

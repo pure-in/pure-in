@@ -102,6 +102,10 @@
 }
 
 @layer components {
+	.container {
+		@apply max-w-7xl px-5;
+	}
+
 	.dots-container {
 		@apply flex-cc gap-2 p-0 absolute text-center top-1/2 w-full;
 	}

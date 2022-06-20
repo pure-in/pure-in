@@ -1,16 +1,15 @@
-import { SliceZoneComponents } from '@prismicio/react';
-import { SlicesLayout, SlicesPage } from 'core/prismic';
-
 import Children from './Children';
 import FooterMain from './FooterMain';
+import HeroWithSaweria from './HeroWithSaweria/HeroWithSaweria';
 import Navbar from './Navbar';
 import Title from './Title';
 
-export const components: SliceZoneComponents<SlicesPage> = {
+export const components = {
 	title: Title,
+	herowithsaweria: HeroWithSaweria,
 };
 
-export const layoutComponents: SliceZoneComponents<SlicesLayout, JSX.Element | JSX.Element[]> = {
+export const layoutComponents = {
 	navbar: Navbar,
 	footermain: FooterMain,
 	children: Children,

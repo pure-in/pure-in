@@ -51,7 +51,11 @@ export const CustomPage = () => {
 					return null;
 				});
 
-			if (pageData && prismicH.isFilled.link(pageData.layout) && pageData.layout.uid) {
+			if (
+				pageData &&
+				prismicH.isFilled.contentRelationship(pageData.layout) &&
+				pageData.layout.uid
+			) {
 				layoutDispatch({ type: 'start' });
 				getByUID<CustomPrismicDoc<LayoutType>>('layouts', pageData.layout.uid)
 					.then((res) => {

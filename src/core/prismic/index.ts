@@ -4,6 +4,7 @@ import { NavbarType } from 'slices/Navbar';
 import { FooterType } from 'slices/FooterMain';
 import { ChildrenType } from 'slices/Children';
 import { TitleType } from 'slices/Title';
+import { HeroWithSaweriaType } from 'slices/HeroWithSaweria';
 
 export const repositoryName = 'pure-in';
 
@@ -50,7 +51,7 @@ export const initialState: PrismicState<never> = {
 	state: 'idle',
 };
 
-export type SlicesPage = TitleType;
+export type SlicesPage = TitleType | HeroWithSaweriaType;
 export type SlicesLayout = NavbarType | FooterType | ChildrenType;
 
 export type SliceZonePageType = prismicT.SliceZone<SlicesPage>;

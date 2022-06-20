@@ -23,11 +23,10 @@ const PagesLayout = ({ children, content }: Props) => {
 
 	return (
 		<>
-			<header className="sticky top-0" ref={upperRef}>
+			<header className="sticky top-0 z-50" ref={upperRef}>
 				<SliceZone
 					slices={content.body.slice(NavbarPosition, childrenPosition)}
 					components={layoutComponents}
-					context={children}
 				/>
 			</header>
 			<main style={{ minHeight }} className="flex-sc col">
@@ -41,7 +40,6 @@ const PagesLayout = ({ children, content }: Props) => {
 			<footer ref={lowerRef}>
 				<SliceZone
 					slices={content.body.slice(childrenPosition + 1, footerPosition + 1)}
-					context={children}
 					components={layoutComponents}
 				/>
 			</footer>
