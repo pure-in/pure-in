@@ -8,3 +8,5 @@ type Primary = {
 
 export type HeroWithSaweriaType = prismicT.Slice<'herowithsaweria', Primary>;
 
+export { default } from './HeroWithSaweria';
+
