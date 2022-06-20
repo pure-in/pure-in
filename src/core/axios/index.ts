@@ -5,6 +5,7 @@ export const saweria = axios.create({
 });
 
 const openWeatherApiKey = process.env.REACT_APP_OPENWEATHER_API ?? '';
+console.log('openWeatherApiKey : ', openWeatherApiKey);
 
 export const openWeather = axios.create({
 	baseURL: 'http://api.openweathermap.org/data/2.5',
