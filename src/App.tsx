@@ -2,9 +2,10 @@ import React from 'react';
 import { PrismicProvider, PrismicToolbar } from '@prismicio/react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import { client, repositoryName } from 'core/prismic';
-import { Preview } from 'pages/Preview';
 import { CustomPage } from 'pages/CustomPage';
 import { NotFound } from 'pages/NotFound';
+import 'core/styles/tailwind.css';
+import 'core/styles/typefaces.css';
 
 export const App = () => {
 	return (
@@ -14,7 +15,6 @@ export const App = () => {
 		>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/preview" element={<Preview />} />
 					<Route path="/" element={<CustomPage />} />
 					<Route path="/:route" element={<CustomPage />} />
 					<Route path="*" element={<NotFound />} />

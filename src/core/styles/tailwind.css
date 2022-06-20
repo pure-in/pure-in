@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -85,7 +87,7 @@
 
 	html,
 	body {
-		@apply m-0 p-0 font-main bg-dark;
+		@apply m-0 p-0 font-main bg-white;
 		scroll-behavior: smooth;
 	}
 
@@ -102,16 +104,38 @@
 }
 
 @layer components {
-	.slider {
-		@apply appearance-none w-full h-1 bg-accent outline-none bg-opacity-40 hover:bg-opacity-70 transition-colors;
+	.dots-container {
+		@apply flex-cc gap-2 p-0 absolute text-center top-1/2 w-full;
+	}
+	.dots {
+		@apply bg-white rounded-[50%] inline-block h-5 text-center w-5 animate-bounce;
+	}
+	.dots:nth-child(1) {
+		animation-delay: 0.2s;
+	}
+	.dots:nth-child(2) {
+		animation-delay: 0.4s;
+	}
+	.dots:nth-child(3) {
+		animation-delay: 0.6s;
+	}
+	.dots:nth-child(4) {
+		animation-delay: 0.8s;
+	}
+	.dots:nth-child(5) {
+		animation-delay: 1s;
 	}
 
-	.slider::-webkit-slider-thumb {
-		@apply appearance-none w-4 h-4 cursor-pointer bg-white rounded-full;
-	}
-
-	.slider::-moz-range-thumb {
-		@apply w-4 h-4 cursor-pointer bg-white rounded-full;
+	@keyframes bounce {
+		0% {
+			transform: translateY(0);
+		}
+		15% {
+			transform: translateY(-15px);
+		}
+		30% {
+			transform: translateY(0);
+		}
 	}
 }
 
