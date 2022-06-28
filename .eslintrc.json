@@ -24,7 +24,8 @@
 		"semi": ["warn", "always"],
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"react-hooks/exhaustive-deps": "off"
+		"react-hooks/exhaustive-deps": "off",
+		"import/no-webpack-loader-syntax" : "off"
 	},
 	"settings": {
 		"react": {

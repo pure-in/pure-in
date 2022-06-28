@@ -1,6 +1,8 @@
+import { SliceComponentProps } from '@prismicio/react';
 import { openWeather } from 'core/axios';
 import { subDays, format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
+import { KualitasUdaraType } from '.';
 import Fair from './JenisKualitasUdara/Fair';
 import Good from './JenisKualitasUdara/Good';
 import Moderate from './JenisKualitasUdara/Moderate';
@@ -24,9 +26,9 @@ type AirPollutionType = {
 	};
 };
 
-const KualitasUdara = () => {
+const KualitasUdara = ({ slice }: SliceComponentProps<KualitasUdaraType>) => {
 	const [AirPollutions, setAirPollutions] = useState<AirPollutionType[]>([]);
-
+	const { id } = slice.primary;
 	useEffect(() => {
 		const startDate = subDays(new Date(), 1).valueOf() / 1000;
 		const endDate = new Date().valueOf() / 1000;
@@ -51,7 +53,10 @@ const KualitasUdara = () => {
 				<h2 className="text-primary text-4xl font-bold text-center mb-10">
 					Kualitas Udara
 				</h2>
-				<div className="flex items-center flex-col gap-5 w-full max-h-96 overflow-y-auto">
+				<div
+					id={id ? id : undefined}
+					className="flex items-center flex-col gap-5 w-full max-h-96 overflow-y-auto"
+				>
 					{AirPollutions.map((air) => (
 						<div
 							className=" w-max gap-10 rounded border flex-bc px-10 py-5"

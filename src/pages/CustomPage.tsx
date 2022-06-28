@@ -76,7 +76,7 @@ export const CustomPage = () => {
 		}
 	}, [page.state, layout.state]);
 
-	if (Loading) return <Loader />;
+	if (Loading) return <Loader className="w-screen h-screen" />;
 
 	if (page.data && layout.data)
 		return (
