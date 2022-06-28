@@ -36,6 +36,7 @@ export const CustomPage = () => {
 	useEffect(() => {
 		async function queryPageData(route: string) {
 			pageDispatch({ type: 'start' });
+			setLoading(true);
 			const formatedRoute = route !== '/' ? `/${route}` : route;
 			const pageData = await getPageByRoute(formatedRoute)
 				.then((res) => {
