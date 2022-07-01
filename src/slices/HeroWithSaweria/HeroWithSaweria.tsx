@@ -43,7 +43,6 @@ const HeroWithSaweria = ({ slice }: SliceComponentProps<HeroWithSaweriaType>) =>
 							href="http://saweria.co"
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-hidden="true"
 						>
 							Ayo Donasi
 						</a>

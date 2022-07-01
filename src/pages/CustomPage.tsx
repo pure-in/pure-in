@@ -22,7 +22,6 @@ import * as prismicH from '@prismicio/helpers';
 
 export const CustomPage = () => {
 	const { route = '/' } = useParams();
-	if (!route) return <NotFound />;
 
 	const [page, pageDispatch] = useReducer<Reducer<PrismicState<PageType>, Action>>(
 		reducer,
@@ -37,8 +36,9 @@ export const CustomPage = () => {
 	useEffect(() => {
 		async function queryPageData(route: string) {
 			pageDispatch({ type: 'start' });
-
-			const pageData = await getPageByRoute(route)
+			setLoading(true);
+			const formatedRoute = route !== '/' ? `/${route}` : route;
+			const pageData = await getPageByRoute(formatedRoute)
 				.then((res) => {
 					pageDispatch({
 						type: 'succeed',
@@ -77,7 +77,7 @@ export const CustomPage = () => {
 		}
 	}, [page.state, layout.state]);
 
-	if (Loading) return <Loader />;
+	if (Loading) return <Loader className="w-screen h-screen" />;
 
 	if (page.data && layout.data)
 		return (

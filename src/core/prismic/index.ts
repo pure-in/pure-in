@@ -7,6 +7,7 @@ import { TitleType } from 'slices/Title';
 import { HeroWithSaweriaType } from 'slices/HeroWithSaweria';
 import { KualitasUdaraType } from 'slices/KualitasUdara';
 import { AdsType } from 'slices/Ads';
+import { MapAirBersihType } from 'slices/MapAirBersih';
 
 export const repositoryName = 'pure-in';
 
@@ -53,7 +54,12 @@ export const initialState: PrismicState<never> = {
 	state: 'idle',
 };
 
-export type SlicesPage = TitleType | HeroWithSaweriaType | KualitasUdaraType | AdsType;
+export type SlicesPage =
+	| TitleType
+	| HeroWithSaweriaType
+	| KualitasUdaraType
+	| AdsType
+	| MapAirBersihType;
 export type SlicesLayout = NavbarType | FooterType | ChildrenType;
 
 export type SliceZonePageType = prismicT.SliceZone<SlicesPage>;

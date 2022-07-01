@@ -3,6 +3,7 @@ import Children from './Children';
 import FooterMain from './FooterMain';
 import HeroWithSaweria from './HeroWithSaweria';
 import KualitasUdara from './KualitasUdara';
+import MapAirBersih from './MapAirBersih';
 import Navbar from './Navbar';
 import Title from './Title';
 
@@ -11,6 +12,7 @@ export const components = {
 	herowithsaweria: HeroWithSaweria,
 	kualitasudara: KualitasUdara,
 	ads: Ads,
+	mapairbersih: MapAirBersih,
 };
 
 export const layoutComponents = {
