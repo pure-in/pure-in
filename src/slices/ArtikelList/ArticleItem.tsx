@@ -15,14 +15,14 @@ const ArticleItem = ({ data, uid, createdAt }: Props) => {
 
 	return (
 		<div className="max-w-xl bg-white rounded-lg border border-gray-200 shadow-md ">
-			<Link to={`/arikel/${uid}`}>
+			<Link to={`/artikel/${uid}`}>
 				<PrismicImage
 					field={thumbnail}
 					className=" rounded-t-md overflow-hidden  w-full h-72 object-cover"
 				/>
 			</Link>
 			<div className="p-5">
-				<Link to={`/arikel/${uid}`}>
+				<Link to={`/artikel/${uid}`}>
 					<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
 						{asText(title)}
 					</h5>
@@ -31,7 +31,7 @@ const ArticleItem = ({ data, uid, createdAt }: Props) => {
 					{createdat && formatRelative(new Date(createdAt), new Date())}
 				</div>
 				<Link
-					to={`/arikel/${uid}`}
+					to={`/artikel/${uid}`}
 					className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 "
 				>
 					Read more

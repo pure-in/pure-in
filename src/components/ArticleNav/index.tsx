@@ -48,7 +48,7 @@ const ArticleNav = () => {
 				{NextUid && (
 					<Link
 						className="flex-sc float-left gap-3 text-primary"
-						to={`/artikel${NextUid}`}
+						to={`/artikel/${NextUid}`}
 					>
 						<AiOutlineLeft /> Next
 					</Link>
@@ -56,7 +56,7 @@ const ArticleNav = () => {
 				{PrevUid && (
 					<Link
 						className="flex-sc float-right gap-3 text-primary"
-						to={`/artikel${PrevUid}`}
+						to={`/artikel/${PrevUid}`}
 					>
 						Prev <AiOutlineRight />
 					</Link>
