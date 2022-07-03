@@ -56,6 +56,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Special Thanks to Generasi GIGIH 2.0 by YABB Team for featuring this Project
+## Special Thanks to Generasi GIGIH 2.0 by YABB Team for featuring this Project
 ## ©2022 Frontend Engineering Group 4 Disaster Management (FE_DM4)
 	
