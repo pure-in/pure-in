@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as prismicT from '@prismicio/types';
-import { PrismicImage, SliceComponentProps } from '@prismicio/react';
+import { SliceComponentProps } from '@prismicio/react';
 import { ArticleType, client, CustomPrismicDoc } from 'core/prismic';
 import ArticleItem from './ArticleItem';
 

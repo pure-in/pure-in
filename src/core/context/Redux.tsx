@@ -1,8 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import store from 'core/redux/store';
 
 function AppProviders({ children }: { children: React.ReactNode }) {
-	return <>{children}</>;
+	return <Provider store={store}>{children}</Provider>;
 }
 
 export default AppProviders;

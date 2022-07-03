@@ -18,6 +18,9 @@ import {
 } from 'core/prismic';
 import * as prismicH from '@prismicio/helpers';
 import { asText } from '@prismicio/richtext';
+import { useDispatch } from 'react-redux';
+import { addCurrentArticle } from 'core/redux/prismic';
+import ArticleNav from 'components/ArticleNav';
 
 const ArtikelPage = () => {
 	const { uid = null } = useParams();
@@ -32,19 +35,20 @@ const ArtikelPage = () => {
 		initialState
 	);
 	const [Loading, setLoading] = useState(true);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		async function queryPageData(uid: string) {
 			pageDispatch({ type: 'start' });
 			setLoading(true);
 
-			getByUID<any>('articles', uid)
+			getByUID<CustomPrismicDoc<ArticleType>>('articles', uid)
 				.then((res) => {
 					pageDispatch({
 						type: 'succeed',
 						data: res.data,
 					});
-
+					dispatch(addCurrentArticle(res));
 					return res.data;
 				})
 				.catch((err) => {
@@ -88,6 +92,7 @@ const ArtikelPage = () => {
 						</h2>
 					</div>
 					<SliceZone slices={page.data.body} components={components} />
+					<ArticleNav />
 				</div>
 			</PagesLayout>
 		);
