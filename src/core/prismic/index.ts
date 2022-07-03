@@ -84,6 +84,7 @@ export type ArticleType = {
 	thumbnail: prismicT.ImageField;
 	uid: prismicT.CustomTypeModelUIDField;
 	createdat: prismicT.DateField;
+	body: SliceZonePageType;
 };
 
 export type CustomPrismicDoc<DocType> = prismicT.PrismicDocument & {

@@ -1,30 +1,29 @@
 import React, { Reducer, useReducer, useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { SliceZone } from '@prismicio/react';
+import { PrismicImage, SliceZone } from '@prismicio/react';
 import { NotFound } from './NotFound';
 import PagesLayout from 'layouts/PagesLayout';
 import { components } from 'slices';
 import { Loader } from 'components/Loader';
 import {
 	Action,
+	ArticleType,
 	CustomPrismicDoc,
 	getByUID,
-	getPageByRoute,
 	initialState,
 	LayoutType,
-	PageType,
 	PrismicState,
 	reducer,
 } from 'core/prismic';
-
 import * as prismicH from '@prismicio/helpers';
+import { asText } from '@prismicio/richtext';
 
 const ArtikelPage = () => {
 	const { uid = null } = useParams();
 	if (!uid) return <NotFound />;
 
-	const [page, pageDispatch] = useReducer<Reducer<PrismicState<PageType>, Action>>(
+	const [page, pageDispatch] = useReducer<Reducer<PrismicState<ArticleType>, Action>>(
 		reducer,
 		initialState
 	);
@@ -38,12 +37,14 @@ const ArtikelPage = () => {
 		async function queryPageData(uid: string) {
 			pageDispatch({ type: 'start' });
 			setLoading(true);
-			const pageData = await getByUID<any>('aricles', uid)
+
+			getByUID<any>('articles', uid)
 				.then((res) => {
 					pageDispatch({
 						type: 'succeed',
 						data: res.data,
 					});
+
 					return res.data;
 				})
 				.catch((err) => {
@@ -51,21 +52,15 @@ const ArtikelPage = () => {
 					return null;
 				});
 
-			if (
-				pageData &&
-				prismicH.isFilled.contentRelationship(pageData.layout) &&
-				pageData.layout.uid
-			) {
-				layoutDispatch({ type: 'start' });
-				getByUID<CustomPrismicDoc<LayoutType>>('layouts', pageData.layout.uid)
-					.then((res) => {
-						layoutDispatch({ type: 'succeed', data: res.data });
-					})
-					.catch((err) => {
-						layoutDispatch({ type: 'fail', error: err });
-						return null;
-					});
-			}
+			layoutDispatch({ type: 'start' });
+			getByUID<CustomPrismicDoc<LayoutType>>('layouts', 'main-layout')
+				.then((res) => {
+					layoutDispatch({ type: 'succeed', data: res.data });
+				})
+				.catch((err) => {
+					layoutDispatch({ type: 'fail', error: err });
+					return null;
+				});
 		}
 
 		queryPageData(uid);
@@ -82,7 +77,18 @@ const ArtikelPage = () => {
 	if (page.data && layout.data)
 		return (
 			<PagesLayout content={layout.data}>
-				<SliceZone slices={page.data.body} components={components} />
+				<div className="section my-5 w-full">
+					<div className="container">
+						<PrismicImage
+							field={page.data.thumbnail}
+							className="max-h-96 w-full object-cover my-4"
+						/>
+						<h2 className="text-primary text-center text-4xl font-bold mb-10">
+							{prismicH.isFilled.richText(page.data.title) && asText(page.data.title)}
+						</h2>
+					</div>
+					<SliceZone slices={page.data.body} components={components} />
+				</div>
 			</PagesLayout>
 		);
 
