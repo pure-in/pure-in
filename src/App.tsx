@@ -6,6 +6,7 @@ import { CustomPage } from 'pages/CustomPage';
 import { NotFound } from 'pages/NotFound';
 import 'core/styles/tailwind.css';
 import 'core/styles/typefaces.css';
+import ArtikelPage from 'pages/ArtikelPage';
 
 export const App = () => {
 	return (
@@ -13,6 +14,7 @@ export const App = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<CustomPage />} />
+					<Route path="/arikel/:uid" element={<ArtikelPage />} />
 					<Route path="/:route" element={<CustomPage />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>

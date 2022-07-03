@@ -79,6 +79,13 @@ export type LayoutType = {
 	body: SliceZoneLayoutType;
 };
 
+export type ArticleType = {
+	title: prismicT.RichTextField;
+	thumbnail: prismicT.ImageField;
+	uid: prismicT.CustomTypeModelUIDField;
+	createdat: prismicT.DateField;
+};
+
 export type CustomPrismicDoc<DocType> = prismicT.PrismicDocument & {
 	data: DocType;
 };
