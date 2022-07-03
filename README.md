@@ -19,17 +19,20 @@ How to get clean water and information about air conditions (in DKI Jakarta)
 
 Providing digital information to educate the public on how to reduce air pollution and see clean water monitoring in DKI Jakarta
 
-## Features 
+## Features
 
-- Start (if you reload the page it doesn't logout)
-  - User opens home page
-  - Opening the article pollution and clean water
-  - Open donation
-  - Open clean water map
-- Preview
-  - Read the article and clean water
-  - Make a donation in saweria
-  - Getting the direction of clean water
+- Air Quality (Kualitas Udara)
+  - Information about air conditions in Jakarta within a certain period of time.
+  - Information displayed using free API data from [openweathermap.](https://openweathermap.org/)
+- Clean Water (Air Bersih)
+  - Information on how to get clean water in the DKI Jakarta area with a location map.
+  - Information displayed using free API data from [Google Maps.](https://developers.google.com/maps)
+- Articles (Artikel)
+  - View articles on air pollution and clean water information.
+  - Articles use CMS [Prismic](https://prismic.io) to make it easier for admins or authors to publish content quickly and easily.
+- Donation (Donasi)
+  - A donation program for visitors who voluntarily donate to help people who are constrained by clean water, natural disasters such as floods and for funding campaigns related to pollution prevention and water-saving strategies that will be implemented.
+  - The donation service uses the donation platform [Saweria](https://saweria.co/) because there are various and easy-to-access payment options availables.
 	
 ## Script you can use for this project
 
