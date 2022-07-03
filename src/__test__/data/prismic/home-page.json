@@ -1,0 +1,163 @@
+{
+	"page": 1,
+	"results_per_page": 20,
+	"results_size": 1,
+	"total_results_size": 1,
+	"total_pages": 1,
+	"next_page": null,
+	"prev_page": null,
+	"results": [
+		{
+			"id": "YqCsKxEAACIAM8ps",
+			"uid": "home",
+			"url": null,
+			"type": "pages",
+			"href": "https://pure-in.cdn.prismic.io/api/v2/documents/search?ref=YsFehBAAACMAqsj3&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22YqCsKxEAACIAM8ps%22%29+%5D%5D",
+			"tags": [],
+			"first_publication_date": "2022-06-08T14:19:17+0000",
+			"last_publication_date": "2022-07-03T06:32:44+0000",
+			"slugs": ["demi-masa-depan-yang-lebih-sehat", "home"],
+			"linked_documents": [],
+			"lang": "id",
+			"alternate_languages": [],
+			"data": {
+				"html_title": "Home",
+				"route": "/",
+				"layout": {
+					"id": "YqCqeBEAACIAM8Gy",
+					"type": "layouts",
+					"tags": [],
+					"lang": "id",
+					"slug": "demi-masa-depan-yang-lebih-sehat",
+					"first_publication_date": "2022-06-08T13:56:13+0000",
+					"last_publication_date": "2022-06-28T04:21:29+0000",
+					"uid": "main-layout",
+					"link_type": "Document",
+					"isBroken": false
+				},
+				"body": [
+					{
+						"primary": {
+							"id": "donasi",
+							"image": {
+								"dimensions": { "width": 593, "height": 593 },
+								"alt": null,
+								"copyright": null,
+								"url": "https://images.prismic.io/pure-in/80547ace-303b-44a3-bfef-b6d0f2bbe3e1_hero+image.png?auto=compress,format"
+							},
+							"title": [
+								{
+									"type": "heading1",
+									"text": "Demi Masa Depan Yang Lebih Sehat",
+									"spans": []
+								}
+							],
+							"description": [
+								{
+									"type": "paragraph",
+									"text": "Pure-In merupakan sebuah situs yang berisi informasi mengenai ",
+									"spans": []
+								},
+								{
+									"type": "paragraph",
+									"text": "cara mendapatkan air bersih dan informasi mengenai kondisi cuaca udara di Jakarta dalam jangka waktu tertentu, serta memberikan edukasi tentang cara mengatasi, mengurangi ",
+									"spans": []
+								},
+								{
+									"type": "paragraph",
+									"text": "polusi udara dan cara menghemat air supaya dapat ",
+									"spans": []
+								},
+								{
+									"type": "paragraph",
+									"text": "menerapkan lingkungan bersih lestari.",
+									"spans": []
+								}
+							],
+							"saweria_url": "https://saweria.co/luuzu"
+						},
+						"items": [{}],
+						"slice_type": "herowithsaweria",
+						"slice_label": null
+					},
+					{
+						"primary": { "id": "kualitas-udara" },
+						"items": [{}],
+						"slice_type": "kualitasudara",
+						"slice_label": null
+					},
+					{
+						"primary": {
+							"image": {
+								"dimensions": { "width": 800, "height": 200 },
+								"alt": null,
+								"copyright": null,
+								"url": "https://images.prismic.io/pure-in/bd7aa0e8-d3a2-40da-b156-18a87d3196f9_ad-sample-900x225.gif?auto=compress,format"
+							},
+							"url": "https://goo.gl/maps/dsema4kRZhSZxdEs6"
+						},
+						"items": [{}],
+						"slice_type": "ads",
+						"slice_label": null
+					},
+					{
+						"primary": {
+							"id": "map-air-bersih",
+							"title": [
+								{ "type": "heading1", "text": "Sumber Air bersih", "spans": [] }
+							]
+						},
+						"items": [
+							{
+								"image": {
+									"dimensions": { "width": 91, "height": 118 },
+									"alt": null,
+									"copyright": null,
+									"url": "https://images.prismic.io/pure-in/a4d8971f-9535-4e55-8214-2520b06448e2_icon.png?auto=compress,format"
+								},
+								"title": "Lokasi 1",
+								"location": {
+									"latitude": -6.175371641294809,
+									"longitude": 106.8025588989258
+								},
+								"map_url": "https://goo.gl/maps/dsema4kRZhSZxdEs6"
+							},
+							{
+								"image": {
+									"dimensions": { "width": 91, "height": 118 },
+									"alt": null,
+									"copyright": null,
+									"url": "https://images.prismic.io/pure-in/a4d8971f-9535-4e55-8214-2520b06448e2_icon.png?auto=compress,format"
+								},
+								"title": "Lokasi 2",
+								"location": {
+									"latitude": -6.195509760592845,
+									"longitude": 106.82573318481447
+								},
+								"map_url": "https://goo.gl/maps/dsema4kRZhSZxdEs6"
+							},
+							{
+								"image": {
+									"dimensions": { "width": 91, "height": 118 },
+									"alt": null,
+									"copyright": null,
+									"url": "https://images.prismic.io/pure-in/a4d8971f-9535-4e55-8214-2520b06448e2_icon.png?auto=compress,format"
+								},
+								"title": "Lokasi 3",
+								"location": {
+									"latitude": -6.167691648176297,
+									"longitude": 106.8340587615967
+								},
+								"map_url": "https://goo.gl/maps/dsema4kRZhSZxdEs6"
+							}
+						],
+						"slice_type": "mapairbersih",
+						"slice_label": null
+					}
+				]
+			}
+		}
+	],
+	"version": "73ae4f1",
+	"license": "All Rights Reserved"
+}

@@ -1,0 +1,19 @@
+{
+	"primary": {
+		"logo": {
+			"dimensions": { "width": 212, "height": 104 },
+			"alt": null,
+			"copyright": null,
+			"url": "https://images.prismic.io/pure-in/d6679ea5-f2f7-4fc0-98da-08b4355e18b1_logoWhite.png?auto=compress,format"
+		}
+	},
+	"items": [
+		{ "label": "Kualitas Udara", "href": "/#kualitas-udara" },
+		{ "label": "Air Bersih", "href": "/#map-air-bersih" },
+		{ "label": "Artikel", "href": "/artikel" },
+		{ "label": "Donasi", "href": "/#donasi" },
+		{ "label": "Tentang Kami", "href": "/about-us" }
+	],
+	"slice_type": "navbar",
+	"slice_label": null
+}

@@ -1,0 +1,87 @@
+{
+	"page": 1,
+	"results_per_page": 20,
+	"results_size": 1,
+	"total_results_size": 1,
+	"total_pages": 1,
+	"next_page": null,
+	"prev_page": null,
+	"results": [
+		{
+			"id": "YqCqeBEAACIAM8Gy",
+			"uid": "main-layout",
+			"url": null,
+			"type": "layouts",
+			"href": "https://pure-in.cdn.prismic.io/api/v2/documents/search?ref=YsFehBAAACMAqsj3&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22YqCqeBEAACIAM8Gy%22%29+%5D%5D",
+			"tags": [],
+			"first_publication_date": "2022-06-08T13:56:13+0000",
+			"last_publication_date": "2022-06-28T04:21:29+0000",
+			"slugs": ["demi-masa-depan-yang-lebih-sehat", "main-layout"],
+			"linked_documents": [],
+			"lang": "id",
+			"alternate_languages": [],
+			"data": {
+				"body": [
+					{
+						"primary": {
+							"logo": {
+								"dimensions": { "width": 212, "height": 104 },
+								"alt": null,
+								"copyright": null,
+								"url": "https://images.prismic.io/pure-in/d6679ea5-f2f7-4fc0-98da-08b4355e18b1_logoWhite.png?auto=compress,format"
+							}
+						},
+						"items": [
+							{ "label": "Kualitas Udara", "href": "/#kualitas-udara" },
+							{ "label": "Air Bersih", "href": "/#map-air-bersih" },
+							{ "label": "Artikel", "href": "/artikel" },
+							{ "label": "Donasi", "href": "/#donasi" },
+							{ "label": "Tentang Kami", "href": "/about-us" }
+						],
+						"slice_type": "navbar",
+						"slice_label": null
+					},
+					{ "primary": {}, "items": [{}], "slice_type": "children", "slice_label": null },
+					{
+						"primary": {
+							"title": [
+								{
+									"type": "heading2",
+									"text": "DEMI MASA DEPAN YANG LEBIH SEHAT",
+									"spans": []
+								}
+							],
+							"description": [
+								{
+									"type": "paragraph",
+									"text": "Stay up to date with our latest ventures and news",
+									"spans": []
+								}
+							],
+							"copyright": [
+								{
+									"type": "paragraph",
+									"text": "© 2022 Pure-In, Kelompok 2 (Disaster Management) Front-End Generasi Gigih 2",
+									"spans": []
+								}
+							],
+							"email": "purein@gmail.com",
+							"phone": "+62899969696969"
+						},
+						"items": [
+							{ "label": "Kualitas Udara", "route": "/" },
+							{ "label": "Air Bersih", "route": "/" },
+							{ "label": "Artikel", "route": "/" },
+							{ "label": "Donasi", "route": "/" },
+							{ "label": "Tentang Kami", "route": "/" }
+						],
+						"slice_type": "footermain",
+						"slice_label": null
+					}
+				]
+			}
+		}
+	],
+	"version": "73ae4f1",
+	"license": "All Rights Reserved"
+}

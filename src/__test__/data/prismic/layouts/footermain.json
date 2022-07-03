@@ -1,0 +1,36 @@
+{
+	"primary": {
+		"title": [
+			{
+				"type": "heading2",
+				"text": "DEMI MASA DEPAN YANG LEBIH SEHAT",
+				"spans": []
+			}
+		],
+		"description": [
+			{
+				"type": "paragraph",
+				"text": "Stay up to date with our latest ventures and news",
+				"spans": []
+			}
+		],
+		"copyright": [
+			{
+				"type": "paragraph",
+				"text": "© 2022 Pure-In, Kelompok 2 (Disaster Management) Front-End Generasi Gigih 2",
+				"spans": []
+			}
+		],
+		"email": "purein@gmail.com",
+		"phone": "+62899969696969"
+	},
+	"items": [
+		{ "label": "Kualitas Udara", "route": "/" },
+		{ "label": "Air Bersih", "route": "/" },
+		{ "label": "Artikel", "route": "/" },
+		{ "label": "Donasi", "route": "/" },
+		{ "label": "Tentang Kami", "route": "/" }
+	],
+	"slice_type": "footermain",
+	"slice_label": null
+}

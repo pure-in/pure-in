@@ -21,7 +21,7 @@ const Navbar = ({ slice }: SliceComponentProps<NavbarType>) => {
 							(link, index) =>
 								link.href && (
 									<Link
-										className="text-white hover:text-opacity-80 relative before:h-px before:absolute before:w-0 before:bg-white hover:before:w-full before:transition-all before:bottom-0 py-2"
+										className="text-white nav-link hover:text-opacity-80 relative before:h-px before:absolute before:w-0 before:bg-white hover:before:w-full before:transition-all before:bottom-0 py-2"
 										key={index}
 										to={link.href}
 									>
@@ -29,9 +29,11 @@ const Navbar = ({ slice }: SliceComponentProps<NavbarType>) => {
 									</Link>
 								)
 						)}
+						<a href=""></a>
 					</div>
-					<div className="block md:hidden">
+					<div aria-label="show links" className="block md:hidden">
 						<button
+							data-testid="hamburger-btn"
 							className="text-white"
 							onClick={() => setOpenMobile((prev) => !prev)}
 						>
@@ -45,7 +47,10 @@ const Navbar = ({ slice }: SliceComponentProps<NavbarType>) => {
 				</div>
 			</div>
 			{OpenMobile && (
-				<div className=" absolute bg-primary h-screen w-screen top-0 left-0 flex-cc col">
+				<div
+					data-testid="mobile-link"
+					className=" absolute bg-primary h-screen w-screen top-0 left-0 flex-cc col"
+				>
 					{slice.items.map(
 						(link, index) =>
 							link.href && (

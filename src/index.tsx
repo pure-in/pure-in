@@ -1,3 +1,4 @@
+import AppProviders from 'core/context/Redux';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
@@ -8,7 +9,9 @@ if (elRoot !== null) {
 	const root = ReactDOM.createRoot(elRoot);
 	root.render(
 		<React.StrictMode>
-			<App />
+			<AppProviders>
+				<App />
+			</AppProviders>
 		</React.StrictMode>
 	);
 }
