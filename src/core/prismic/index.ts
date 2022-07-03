@@ -8,6 +8,7 @@ import { HeroWithSaweriaType } from 'slices/HeroWithSaweria';
 import { KualitasUdaraType } from 'slices/KualitasUdara';
 import { AdsType } from 'slices/Ads';
 import { MapAirBersihType } from 'slices/MapAirBersih';
+import { ArtikelListType } from 'slices/ArtikelList';
 
 export const repositoryName = 'pure-in';
 
@@ -59,7 +60,8 @@ export type SlicesPage =
 	| HeroWithSaweriaType
 	| KualitasUdaraType
 	| AdsType
-	| MapAirBersihType;
+	| MapAirBersihType
+	| ArtikelListType;
 export type SlicesLayout = NavbarType | FooterType | ChildrenType;
 
 export type SliceZonePageType = prismicT.SliceZone<SlicesPage>;
