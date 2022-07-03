@@ -1,4 +1,5 @@
 import Ads from './Ads';
+import ArtikelList from './ArtikelList';
 import Children from './Children';
 import FooterMain from './FooterMain';
 import HeroWithSaweria from './HeroWithSaweria';
@@ -13,6 +14,7 @@ export const components = {
 	kualitasudara: KualitasUdara,
 	ads: Ads,
 	mapairbersih: MapAirBersih,
+	artikellist: ArtikelList,
 };
 
 export const layoutComponents = {
