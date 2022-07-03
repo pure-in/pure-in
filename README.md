@@ -36,6 +36,9 @@ Providing digital information to educate the public on how to reduce air polluti
 	
 ## Script you can use for this project
 
+### `npm install`
+This command installs a package, and any packages that it depends on.
+
 ### `npm start`
 
 Runs the app in the development mode.\
