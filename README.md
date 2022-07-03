@@ -23,10 +23,10 @@ Providing digital information to educate the public on how to reduce air polluti
 
 - Air Quality (Kualitas Udara)
   - Information about air conditions in Jakarta within a certain period of time.
-  - Information displayed using free API data from [openweathermap.](https://openweathermap.org/)
+  - Information displayed using free API data from [OpenWeatherMap](https://openweathermap.org/).
 - Clean Water (Air Bersih)
   - Information on how to get clean water in the DKI Jakarta area with a location map.
-  - Information displayed using free API data from [Google Maps.](https://developers.google.com/maps)
+  - Information displayed using free API data from [Google Maps](https://developers.google.com/maps).
 - Articles (Artikel)
   - View articles on air pollution and clean water information.
   - Articles use CMS [Prismic](https://prismic.io) to make it easier for admins or authors to publish content quickly and easily.
