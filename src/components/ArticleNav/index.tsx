@@ -26,6 +26,9 @@ const ArticleNav = () => {
 			})
 			.then((res) => {
 				setPrevUid(res.uid);
+			})
+			.catch(() => {
+				return null;
 			});
 
 		client
@@ -39,6 +42,9 @@ const ArticleNav = () => {
 			})
 			.then((res) => {
 				setNextUid(res.uid);
+			})
+			.catch(() => {
+				return null;
 			});
 	}, []);
 
