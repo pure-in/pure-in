@@ -33,7 +33,13 @@ Providing digital information to educate the public on how to reduce air polluti
 - Donation (Donasi)
   - A donation program for visitors who voluntarily donate to help people who are constrained by clean water, natural disasters such as floods and for funding campaigns related to pollution prevention and water-saving strategies that will be implemented.
   - The donation service uses the donation platform [Saweria](https://saweria.co/) because there are various and easy-to-access payment options availables.
-	
+## Env Variable
+In this project need [Google Map API](https://developers.google.com/maps) Key and [OpenWeather](https://openweathermap.org) API to get full features when you tried to clone it
+  ```bash
+    REACT_APP_OPENWEATHER_API =  
+    REACT_APP_GOOGLE_MAP_API_KEY = 
+  ```
+ 
 ## Script you can use for this project
 
 ### `npm install`
