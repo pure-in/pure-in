@@ -28,17 +28,20 @@ const KualitasUdara = ({ slice }: SliceComponentProps<KualitasUdaraType>) => {
 	useEffect(() => {
 		const startDate = subDays(new Date(), 1).valueOf() / 1000;
 		const endDate = new Date().valueOf() / 1000;
-
+		const JAKARTA_COORDINATE = {
+			lat: '-6.207561834386189',
+			lon: '106.84737078234377',
+		};
 		openWeather
 			.get('/air_pollution/history', {
 				params: {
-					lat: '-6.207561834386189',
-					lon: '106.84737078234377',
+					lat: JAKARTA_COORDINATE.lat,
+					lon: JAKARTA_COORDINATE.lon,
 					start: Math.floor(startDate),
 					end: Math.floor(endDate),
 				},
 			})
-			.then((res) => {
+			.then((res: { data: { list: AirPollutionType[] } }) => {
 				setAirPollutions(res.data.list.reverse());
 			});
 	}, []);
